@@ -120,6 +120,9 @@ export function App() {
     },
     [setCounter]
   );
+
+  (function(x, y){ arguments[1] = 1; return y; })(0) // meta-bob test
+
   const downloadMany = () => {
     setErrors([]);
     setCounter(0);
