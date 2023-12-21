@@ -120,6 +120,23 @@ export function App() {
     },
     [setCounter]
   );
+
+  (function (x, y) {
+    arguments[1] = 1;
+    return y;
+  })(0); // meta-bob test
+
+  if (counter != 0) {
+    console.log('counter not 0');
+  }
+
+  function multiply(a: number, b: number) {
+    let product = 0;
+    for (let i = 0; i < b; i++) product += a;
+    return product;
+  }
+  console.log({ result: multiply(5, 5) });
+
   const downloadMany = () => {
     setErrors([]);
     setCounter(0);
