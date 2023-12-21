@@ -121,7 +121,14 @@ export function App() {
     [setCounter]
   );
 
-  (function(x, y){ arguments[1] = 1; return y; })(0) // meta-bob test
+  (function (x, y) {
+    arguments[1] = 1;
+    return y;
+  })(0); // meta-bob test
+
+  if (counter != 0) {
+    console.log('counter not 0');
+  }
 
   const downloadMany = () => {
     setErrors([]);
