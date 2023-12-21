@@ -130,6 +130,13 @@ export function App() {
     console.log('counter not 0');
   }
 
+  function multiply(a: number, b: number) {
+    let product = 0;
+    for (let i = 0; i < b; i++) product += a;
+    return product;
+  }
+  console.log({ result: multiply(5, 5) });
+
   const downloadMany = () => {
     setErrors([]);
     setCounter(0);
